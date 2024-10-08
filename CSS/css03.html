@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .my_home{
+            width: 600px;
+            height: 450px;
+            background-color: aqua;
+        }
+
+        .header-block{
+            width: 100%;
+            height: 20%;
+            background-color: black;
+        }
+
+        .middle-block {
+            width: 100%;
+            height: 60%;
+            display: flex;
+            background-color: blue;
+        }
+        .middle-block > .room1 {
+            width: 20%;
+            height: 100%;
+            background-color: chartreuse;
+        }
+
+        .middle-block > .room2 {
+            width: 60%;
+            height: 100%;
+            background-color: burlywood;
+        }
+        .middle-block > .room3 {
+            width: 20%;
+            height: 100%;
+            background-color: blueviolet;
+        }
+
+        .footer-block {
+            width: 100%;
+            height: 20%;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="my_home">
+
+        <div class="header-block"></div>
+
+        <div class="middle-block">
+
+            <div class="room1"></div>
+
+            <div class="room2"></div>
+
+            <div class="room3"></div>
+
+        </div>
+
+        <div class="footer-block"></div>
+
+    </div>
+</body>
+</html>

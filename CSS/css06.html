@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box-contens {
+            width: 500px;
+            height: 500px;
+            background-color: rgb(160, 222, 151);
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        .box-contens>.block {
+            width: 100%;
+            height: 32%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            
+            margin-bottom: 8px;
+        }
+
+        .block>.small-box {
+            width: 32%;
+            height: 100%;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box-contens">
+
+        <div class="block">
+            <div class="small-box"></div>
+            <div class="small-box"></div>
+            <div class="small-box"></div>
+        </div>
+
+        <div class="block">
+            <div class="small-box"></div>
+            <div class="small-box"></div>
+            <div class="small-box"></div>
+        </div>
+
+        <div class="block">
+            <div class="small-box"></div>
+            <div class="small-box"></div>
+            <div class="small-box"></div>
+        </div>
+
+    </div>
+</body>
+
+</html>

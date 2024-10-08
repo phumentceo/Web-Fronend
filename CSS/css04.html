@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .my-block {
+            width:  40%;
+            height: 50%;
+            background-color: rgb(196, 198, 197);
+            display: flex;
+            justify-content: space-between;
+            padding: 30px;
+        }
+
+        .block-left {
+            width: 49%;
+            height: 100%;
+            background-color: aqua;
+        }
+
+        .block-right {
+            width: 49%;
+            height: 100%;
+           
+        }
+
+        .block-right > .header-block {
+            width: 100%;
+            height: 31%;
+            background-color: black;
+        }
+
+        .block-right > .middle-block {
+            width: 100%;
+            height: 31%;
+            background-color: white;
+            margin-top: 4%;
+        }
+
+        .block-right > .footer-block{
+            width: 100%;
+            height: 31%;
+            background-color: gray;
+            margin-top: 4.3%;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <div class="my-block">
+
+        <div class="block-left"></div>
+
+        <div class="block-right">
+            
+            <div class="header-block"></div>
+
+            <div class="middle-block"></div>
+
+            <div class="footer-block"></div>
+
+        </div>
+
+    </div>
+</body>
+</html>
