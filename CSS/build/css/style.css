@@ -1,0 +1,72 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 300vh;
+   
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+}
+
+.navbar {
+    width: 100%;
+    height: 50px;
+    background-color: red;
+    position: sticky;
+    top: 0;
+}
+
+.contents {
+    width: 70%;
+    height: 100%;
+    background-color: aquamarine;
+    
+    margin: auto;
+    margin-top: 10px;
+    
+}
+
+.contents > .top-contens {
+    width: 100%;
+    height: 600px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-contens > .news-block {
+    width: 69%;
+    height: 100%;
+    background-color: blue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.news-block > .news{
+    width: 49.5%;
+    height: 49.6%;
+    margin-bottom: 5px;
+    background-color: rgb(63, 242, 9);
+}
+
+.top-contens > .banner-block {
+    width: 30%;
+    height: 100%; 
+}
+
+
+.banner-block > .banner{
+    width: 100%;
+    height: 49.5%;
+    background-color: brown;
+    margin-bottom: 1.8%;
+}
+.banner-block > .banner-2{
+    background-color: rgb(138, 138, 208);
+}
