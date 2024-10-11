@@ -70,3 +70,53 @@ body{
 .banner-block > .banner-2{
     background-color: rgb(138, 138, 208);
 }
+
+/* vdo contents start */
+.contents > .vdo-contents {
+    width: 100%;
+    height: 680px;
+    background-color: black;
+    margin-top: 40px;
+    padding: 20px 30px;
+}
+.vdo-contents > .popular-vdo {
+    width: 100%;
+    height: 49%;
+    display: flex;
+    justify-content: space-between;
+}
+.popular-vdo > .vdo {
+    width: 33%;
+    height: 100%;
+    background-color: azure;
+}
+
+.vdo-contents > .vdo-list {
+    width: 100%;
+    height: 50%;
+    margin-top: 7px;
+  
+    display: flex;
+    justify-content: space-between;
+}
+.vdo-list > .vdo-block {
+    width: 69.5%;
+    height: 100%;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.vdo-block > .vdo {
+    width: 24%;
+    height: 49%;
+    margin-bottom: 6.5px;
+    background-color: azure;
+}
+
+.vdo-list > .banner {
+    width: 30%;
+    height: 100%;
+    background-color: azure;
+}
+/* vdo contents end */
