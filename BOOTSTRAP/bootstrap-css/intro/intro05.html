@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <style>
+        body{
+            height: 100vh;
+            position: relative;
+        }
+        .main-contents{
+            width: 60%;
+            height: 700px;
+            background-color: aqua;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main-contents row p-0 m-0">
+
+        <div class="contents col-11 p-0 m-0 h-100 bg-info">
+
+            <div class="col-12 row p-0 m-0 h-50 bg-primary">
+                <div class="col-7 h-100 bg-warning "></div>
+                <div class="col-5 row p-0 m-0 h-100 bg-danger ">
+                    <div class="col-12 h-50 bg-white"></div>
+                    <div class="col-12 h-50 bg-primary"></div>
+                </div>
+            </div>
+
+            <div class="col-12 row p-0 m-0 h-50 bg-success">
+                <div class="col-4 h-50 bg-secondary"></div>
+                <div class="col-8 h-50 bg-white"></div>
+                <div class="col-4 h-50 bg-warning"></div>
+                <div class="col-4 h-50 bg-dark"></div>
+                <div class="col-4 h-50 bg-primary"></div>
+            </div>
+        </div>
+
+        <div class="navbar-right col-1 bg-dark">
+
+        </div>
+    </div>
+</body>
+</html>

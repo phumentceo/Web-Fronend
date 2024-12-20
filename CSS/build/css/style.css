@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 body{
-    height: 300vh;
    
 }
 
@@ -24,9 +23,6 @@ body{
 
 .contents {
     width: 70%;
-    height: 100%;
-    background-color: aquamarine;
-    
     margin: auto;
     margin-top: 10px;
     
@@ -120,3 +116,102 @@ body{
     background-color: azure;
 }
 /* vdo contents end */
+
+/* entertainment start */
+.entertainment > .top-techno > .techno-image {
+    background-color: pink;
+}
+.entertainment > .top-techno > .techno-desc {
+    background-color: rgb(163, 164, 164);
+}
+.entertainment > .techno-list > .techno-block{
+    background-color: deepskyblue;
+}
+/* entertainment end */
+
+
+/* technology start */
+.techno-content{
+    width: 100%;
+    height: 430px;
+    background-color: blueviolet;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+}
+
+.techno-content > .top-techno {
+    width: 29%;
+    height: 100%;
+    background-color: chartreuse;
+}
+.techno-content > .techno-list {
+    width: 69%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.techno-list > .techno-block {
+    width: 24%;
+    height: 49%;
+    margin-bottom: 8px;
+    background-color: rgb(255, 192, 192);
+}
+
+.top-techno > .techno-image {
+    height: 60%;
+    width: 100%;
+    background-color: brown;
+}
+.top-techno > .techno-desc {
+    height: 40%;
+    width: 100%;
+    background-color: cadetblue;
+}
+
+/* technology end */
+
+
+/* life start */
+.life-content > .top-techno > .techno-image {
+    background-color: chartreuse;
+}
+
+.life-content > .top-techno > .techno-desc {
+    background-color: rgb(210, 153, 239);
+}
+
+.life-content > .techno-list > .techno-block{
+    background-color: rgb(21, 21, 43);
+}
+/* life end */
+
+/* sport content start */
+.sport-content > .top-techno > .techno-image {
+    background-color: burlywood;
+}
+.sport-content > .top-techno > .techno-desc {
+    background-color: black;
+} 
+
+.sport-content > .techno-list > .techno-block {
+    background-color: rgb(175, 176, 176);
+}
+/* sport content end */
+
+
+/* footer start */
+.footer {
+    width: 100%;
+    height: 400px;
+    background-color: black;
+    margin-top: 50px;
+}
+.footer > .contents {
+    width: 70%;
+    height: 100%;
+    background-color: rgb(85, 85, 85);
+}
+/* footer end */
