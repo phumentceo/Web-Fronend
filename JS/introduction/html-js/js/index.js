@@ -1,112 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Categories</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg bg-dark header-nav">
-        <div class="container-fluid">
-            <a class="navbar-brand text-light" href="#">JS</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="categories-item">
 
-                     
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </div>
-        </div>
-    </nav>
-
-   <div class=" container mt-3">
-
-      <!-- Slider start -->
-      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner slides-item" >
-            <!-- <div class="carousel-item active">
-                <img style="height: 500px;" src="https://media.product.which.co.uk/prod/images/original/f4e8c0ef7c7b-phones-vertical-header.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img style="height: 500px;" src="https://media.product.which.co.uk/prod/images/original/f4e8c0ef7c7b-phones-vertical-header.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img style="height: 500px;" src="https://media.product.which.co.uk/prod/images/original/f4e8c0ef7c7b-phones-vertical-header.jpg" class="d-block w-100" alt="...">
-            </div> -->
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-      <!-- Slider end -->
-
-      <!-- Category -->
-       <section class=" categories">
-          <h3 class=" text-center mb-4">Categories</h3>
-          <div class="row p-0 m-0">
-
-               <div class="col-lg-6 p-0 m-0">
-                   <div class="row p-0 m-0" id="category-left">
-
-                       
-
-                   </div>
-               </div>
-
-               <div class="col-lg-6" id="category-right">
-                    
-               </div>
-
-          </div>
-       </section>
-       <!-- Category -->
-
-   </div>
-
-</body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-<script>
     const categories = [
         { 
             id: 1,
             name: 'Phone',
             title : "Phone the popular for combodain",
             img   : "https://cdn.shopify.com/s/files/1/0458/5927/4902/files/iphone-xr-apple-by-ozmobiles-2_6ac824a1-0e9d-4743-b0a8-73bc11deaaa2_600x.jpg?v=1727160358",
+            qty   : 100,
         },
         { 
             id: 2, 
             name: 'Computer',
             title : "Computer new stock",
             img   : "https://thumbs.dreamstime.com/z/variety-computers-both-laptop-desktops-sale-computer-store-computers-sale-computer-store-135429635.jpg",
+            qty   : 50,
         },
         { 
             id: 3,
             name: 'Clothes',
             title : "Computer new stock",
             img   : "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/fe679993-4bb5-4179-b13c-1febabcc1189/width=450/00040-948056869.jpeg",
+            qty   : 100,
             types: [
                 { id: 1, name: 'Men' },
                 { id: 2, name: 'Women' },
                 { id: 3, name: 'Children' }
             ]
+
         }
     ];
 
@@ -117,7 +36,7 @@
         },
         {
             'id' : 2,
-            'image' :  'https://cdn.shopify.com/s/files/1/0070/7032/articles/ways_20to_20make_20money_20from_20your_20phone_e0f9fb43-00b3-4f87-ac87-6fb6cfb17df5.png?v=1729524317',
+            'image' :  'https://allgen.com/wp-content/uploads/2019/11/san-antonio-computer-store-parts-department.jpg',
         },
         {
             'id' : 3,
@@ -179,7 +98,7 @@
 
     const categoryLeft = document.querySelector("#category-left");
     const categoryRight = document.querySelector("#category-right");
-    
+
     categories.map((value,index) => {
         let  leftInner = ``;
         if(index != 2){
@@ -190,6 +109,7 @@
                         <div class="card-body">
                             <h3>${value.name}</h3>
                             <p>${value.title}</p>
+                            <p>${value.qty} Product</p>
                         </div>
                     </div>
                 </div>
@@ -204,6 +124,7 @@
                 <div class="card-body">
                     <h3>${value.name}</h3>
                     <p>${value.title}</p>
+                     <p>${value.qty} Product</p>
                 </div>
             </div>
             `;
@@ -211,7 +132,6 @@
             categoryRight.innerHTML += rightInner;
         }
     })
-    
-</script>
 
-</html>
+
+    
