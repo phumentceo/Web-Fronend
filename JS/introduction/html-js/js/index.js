@@ -44,6 +44,66 @@
         }
     ];
 
+
+    const products = [
+        {
+            "id" : 1,
+            "name" : "Vivo X100",
+            "price" : 400,
+            "qty"   : 10,
+            "image" : "https://tradingshenzhen.com/13803-large_default/vivo-x100-16gb256gb.jpg"
+        },
+        {
+            "id" : 2,
+            "name" : "I phone 13 pro Golden",
+            "price" : 400,
+            "qty"   : 10,
+            "image" : "https://compasia.com.ph/cdn/shop/files/iphone-13-pro-max-smart-locked-490911_600x.png?v=1722544104"
+        },
+        {
+            "id" : 3,
+            "name" : "I phone 13 pro",
+            "price" : 400,
+            "qty"   : 10,
+            "image" : "https://buy.gazelle.com/cdn/shop/files/iPhone_13_Pro_Max_-_Green_-_Overlap_Trans-cropped.jpg?v=1734651797&width=1946"
+        },
+        {
+            "id" : 4,
+            "name" : "I phone 13 pro",
+            "price" : 400,
+            "qty"   : 10,
+            "image" : "https://asia-exstatic-vivofs.vivo.com/PSee2l50xoirPK7y/1719300660152/40ed4c1601b8b87b1b7a8d8ef6ea2b0d.png"
+        },
+        {
+            "id" : 5,
+            "name" : "I phone 13 pro",
+            "price" : 400,
+            "qty"   : 10,
+            "image" : "https://asia-exstatic-vivofs.vivo.com/PSee2l50xoirPK7y/1719300660152/40ed4c1601b8b87b1b7a8d8ef6ea2b0d.png"
+        },
+        {
+            "id" : 6,
+            "name" : "I phone 13 pro",
+            "price" : 400,
+            "qty"   : 10,
+            "image" : "https://asia-exstatic-vivofs.vivo.com/PSee2l50xoirPK7y/1719300660152/40ed4c1601b8b87b1b7a8d8ef6ea2b0d.png"
+        },
+        {
+            "id" : 7,
+            "name" : "I phone 13 pro",
+            "price" : 400,
+            "qty"   : 10,
+            "image" : "https://asia-exstatic-vivofs.vivo.com/PSee2l50xoirPK7y/1719300660152/40ed4c1601b8b87b1b7a8d8ef6ea2b0d.png"
+        },
+        {
+            "id" : 8,
+            "name" : "I phone 13 pro",
+            "price" : 400,
+            "qty"   : 10,
+            "image" : "https://asia-exstatic-vivofs.vivo.com/PSee2l50xoirPK7y/1719300660152/40ed4c1601b8b87b1b7a8d8ef6ea2b0d.png"
+        }
+    ]
+
     const categoriesItem = document.getElementById('categories-item');
     const slidesItem   = document.querySelector('.slides-item');
 
@@ -132,6 +192,33 @@
             categoryRight.innerHTML += rightInner;
         }
     })
+
+
+
+    const productShow = document.querySelector("#show-products");
+
+    products.forEach((value,index) => {
+        let productHtml = ``;
+
+        productHtml  += `
+            <div class="col-lg-3 col-md-6 col-12 mb-3">
+                <div class="card product shadow-sm">
+                    <img src="${value.image}" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">${value.name}</h5>
+                        <p class="card-text">$${value.price}</p>
+                        <div class="icon-block">
+                            <i data-bs-toggle="modal" data-bs-target="#modal-show_product" class="bi bi-search"></i>
+                            <i class="bi bi-heart"></i>
+                            <i class="bi bi-bag-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        productShow.innerHTML += productHtml;
+    });
 
 
     

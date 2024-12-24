@@ -80,4 +80,9 @@ img {
 }
 
 
+.modal-image-show > img {
+    width: 100%;
+}
+
+
 
