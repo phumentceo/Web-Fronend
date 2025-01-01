@@ -12,7 +12,9 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-dark header-nav">
         <div class="container-fluid">
-            <a class="navbar-brand text-light" href="#">JS</a>
+            <a class="navbar-brand text-light" href="#">
+                <img style="width: 100px;" src="https://www.pngall.com/wp-content/uploads/13/Shopify-Logo-PNG.png" alt="">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -25,9 +27,33 @@
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
+
+                <div class="cart-box" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                    <i class="bi bi-basket3 cartIcon"></i>
+                </div>
+                
+
             </div>
         </div>
     </nav>
+
+
+    <!-- cart sidebar start -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Cart Item</h5>
+          <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body"  id="cart-items">
+            <!-- <div class="items d-flex justify-content-between align-items-center mb-3">
+                <img width="50px" src="https://www.hotspotstore.com/wp-content/uploads/2023/03/Oppo-Reno-8-T-5G-Might-Black2-2.webp" alt="">
+                <p>$400</p>
+                <p>Qty : 3</p>
+                <button>remove</button>
+            </div> -->
+        </div>
+    </div>
+    <!-- cart sidebar end  -->
 
    <div class=" container mt-3">
 
@@ -87,37 +113,31 @@
 
          <div class="row p-0 m-0" id="show-products">
 
-             
-
-            
-
          </div>
 
        </section>
        <!-- All Product end-->
 
 
-       
-        
-  
+       <div class=" mt-5">
+          <div class=" w-50  mx-auto">
+            <h6 class=" text-center">follow me with email</h6>
+            <div class=" d-flex">
+                <input type="text" class=" form-control shadow-none rounded-0" placeholder="Enter your email">
+                <button class="btn btn-primary w-25 mx-auto shadow-none rounded-0" id="search-btn">Subscript</button>
+            </div>
+          </div>
+          
+       </div>
+
         <!-- Modal start-->
         <div class="modal fade" id="modal-show_product" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-dialog modal-dialog-centered" style="max-width: 40%;">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
                     <div class="modal-body">
-                        <div class="row">
-                            <div class="col-lg-6 modal-image-show">
-                                <img src="https://asia-exstatic-vivofs.vivo.com/PSee2l50xoirPK7y/1719300660152/40ed4c1601b8b87b1b7a8d8ef6ea2b0d.png" alt="">
-                            </div>
-                            <div class="col-lg-6">
-                                <h4>I phone 12 pro max</h4>
-                                <p>Price : $400</p>
-                                <button class=" btn btn-primary">add to cart</button>
-                            </div>                        
+                        <button type="button" class="btn-close float-end shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="row py-4 product-view">
+                                               
                         </div>
                         
                     </div>
@@ -127,6 +147,9 @@
         <!-- Modal end -->
 
    </div>
+
+
+   
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>

@@ -69,38 +69,38 @@
         },
         {
             "id" : 4,
-            "name" : "I phone 13 pro",
+            "name" : "Samsung Galaxy a52",
             "price" : 400,
             "qty"   : 10,
-            "image" : "https://asia-exstatic-vivofs.vivo.com/PSee2l50xoirPK7y/1719300660152/40ed4c1601b8b87b1b7a8d8ef6ea2b0d.png"
+            "image" : "https://images.samsung.com/is/image/samsung/assets/pk/galaxy-a52/buy/A52_AwesomeWhite_ProductKV_MO_img.jpg?$ORIGIN_JPG$"
         },
         {
             "id" : 5,
-            "name" : "I phone 13 pro",
-            "price" : 400,
+            "name" : "Asus Vivobook 16 A1605V",
+            "price" : 750,
             "qty"   : 10,
-            "image" : "https://asia-exstatic-vivofs.vivo.com/PSee2l50xoirPK7y/1719300660152/40ed4c1601b8b87b1b7a8d8ef6ea2b0d.png"
+            "image" : "https://www.nbplaza.com.my/44892-large_default/asus-vivobook-16-a1605v-apmb036ws-16-wuxga-laptop-silver-core-5-120u-16gb-512gb-ssd-intel-w11-hs-.jpg"
         },
         {
             "id" : 6,
-            "name" : "I phone 13 pro",
-            "price" : 400,
+            "name" : "Acer Debuts New Swift ",
+            "price" : 650,
             "qty"   : 10,
-            "image" : "https://asia-exstatic-vivofs.vivo.com/PSee2l50xoirPK7y/1719300660152/40ed4c1601b8b87b1b7a8d8ef6ea2b0d.png"
+            "image" : "https://cdn.uc.assets.prezly.com/4b12c96f-6bb0-4c19-b94d-62056ebb5940/Acer-Swift-14-AI-sf14-51(T)-01.jpg"
         },
         {
             "id" : 7,
-            "name" : "I phone 13 pro",
-            "price" : 400,
+            "name" : "Oppo Reno 8T-5G-8",
+            "price" : 260,
             "qty"   : 10,
-            "image" : "https://asia-exstatic-vivofs.vivo.com/PSee2l50xoirPK7y/1719300660152/40ed4c1601b8b87b1b7a8d8ef6ea2b0d.png"
+            "image" : "https://www.hotspotstore.com/wp-content/uploads/2023/03/Oppo-Reno-8-T-5G-Might-Black2-2.webp"
         },
         {
             "id" : 8,
-            "name" : "I phone 13 pro",
-            "price" : 400,
+            "name" : "I phone 16 pro",
+            "price" : 970,
             "qty"   : 10,
-            "image" : "https://asia-exstatic-vivofs.vivo.com/PSee2l50xoirPK7y/1719300660152/40ed4c1601b8b87b1b7a8d8ef6ea2b0d.png"
+            "image" : "https://www.imagineonline.store/cdn/shop/files/iPhone_16_Pro_Desert_Titanium_PDP_Image_Position_1b__en-IN.jpg?v=1727249977&width=823"
         }
     ]
 
@@ -208,7 +208,7 @@
                         <h5 class="card-title">${value.name}</h5>
                         <p class="card-text">$${value.price}</p>
                         <div class="icon-block">
-                            <i data-bs-toggle="modal" data-bs-target="#modal-show_product" class="bi bi-search"></i>
+                            <i onclick='viewProduct(${value.id})' data-bs-toggle="modal" data-bs-target="#modal-show_product" class="bi bi-search"></i>
                             <i class="bi bi-heart"></i>
                             <i class="bi bi-bag-plus"></i>
                         </div>
@@ -221,4 +221,85 @@
     });
 
 
+    const productView = document.querySelector(".product-view");
+    const viewProduct = (id) => {
+        
+        let product = products.find(value => value.id == id);
+
+        let productHtml = `
+            <div class="col-lg-6 modal-image-show">
+                <img style="height: 350px; width: 100%;" src="${product.image}" alt="">
+            </div>
+            <div class="col-lg-6">
+                <h4>${product.name}</h4>
+                <p>Price : $${product.price}</p>
+                <button onclick='addToCart(${product.id})' class=" btn btn-primary">add to cart</button>
+            </div>           
+        `;
+        
+        productView.innerHTML = productHtml;
+    }
+
+
+    //the array variable created for store cart items
+    let cart = [];
+
+    // Function to add an item to the cart
+    const addToCart = (id) => {
+
+        alert(id);
+
+        let item = products.find(value => value.id == id); 
+
+        // let existingItem = cart.find(item => item.id == id);
+
+
+        cart.push(item);
+
+        // if (existingItem) {
+        //     existingItem.qty += 1; 
+        // } else {
+        //     cart.push({ ...item, qty: 1 });
+        // }
+
+        renderCartItems();
+    };
+
+
+
+
+    //the function for show items in cart
+    const renderCartItems = () => {
+
+        const cartContainer = document.querySelector("#cart-items");
+        
+        let cartHtml = "";
+
+        if (cart.length === 0) {
+            cartHtml = `<p class="text-center">Your cart is empty.</p>`;
+        } else {
+            cart.forEach(item => {
+                cartHtml += `
+                <div class="items d-flex justify-content-between align-items-center mb-3">
+                      <img width="50px" src="${item.image}" alt="">
+                      <p>$${item.price}</p>
+                      <p>Qty : 3</p>
+                      <button>remove</button>
+                </div>
+                `;
+            });
+        }
+
+        cartContainer.innerHTML = cartHtml;
+    };
+
+
+    renderCartItems();
+
+    // Function to remove an item from the cart
+    const removeFromCart = (id) => {
+        cart = cart.filter(item => item.id != id); // Remove the item by filtering out the matching ID
+        renderCartItems(); // Update the cart UI
+    };
+    
     
